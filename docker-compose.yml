@@ -1,0 +1,9 @@
+services:
+  backend:
+    build: .
+    container_name: xero
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app/app:delegated
